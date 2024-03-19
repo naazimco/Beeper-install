@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Beeper
+Icon=/apps/AppImage/Beeper/icon.png
+Exec=/apps/AppImage/Beeper/Beeper.AppImage
+Categories=Social
+Terminal=false
