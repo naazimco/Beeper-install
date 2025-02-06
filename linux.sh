@@ -10,5 +10,5 @@ sudo mkdir /apps/AppImage/Beeper
 sudo cp beeper.desktop ~/.local/share/applications
 sudo cp Beeper.AppImage /apps/AppImage/Beeper
 sudo cp icon.png /apps/AppImage/Beeper
-cd /apps.AppImage/Beeper/
+cd /apps/AppImage/Beeper/
 echo Succesfully installed Beeper.
