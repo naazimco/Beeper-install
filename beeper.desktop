@@ -1,7 +1,13 @@
 [Desktop Entry]
 Type=Application
 Name=Beeper
+GenericName=Chat Client
+Comment=Unified messaging app for all your chats
 Icon=/apps/AppImage/Beeper/icon.png
 Exec=/apps/AppImage/Beeper/Beeper.AppImage
-Categories=Social
+Categories=Network;InstantMessaging;
 Terminal=false
+StartupWMClass=Beeper
+MimeType=x-scheme-handler/beeper;
+Keywords=Chat;Messaging;IM;Beeper;
+X-GNOME-UsesNotifications=true
