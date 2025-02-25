@@ -8,13 +8,13 @@ This repository provides command-line scripts to simplify the installation of Be
 
 ## Supported Platforms  
 
-- **Windows** (`[Beeper_Windows_install.sh](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_Windows_install.sh)`)  
-- **macOS** (`[Beeper_macOS_install.sh](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_macOS_install.sh)`)  
-- **Arch Linux** (`[Beeper_ArchLinux_install.sh](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_Linux-Arch_install.sh)`)  
-- **Debian/Ubuntu/KDE/Linux Mint** (`[Linux_Debian+Ubuntu_install.sh](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_Linux-Debian+Ubuntu_install.sh)`)  
-- **Fedora** (`[Linux_Fedora_install.sh](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_Linux-Fedora_install.sh)`)  
-- **openSUSE** (`[Beeper_SUSE_install.sh](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_Linux-SUSE_install.sh)`)  
-- **ChromeOS** (`[Beeper_ChromeOS_install.sh](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_ChromeOS_install.sh)`)  
+- **Windows** ([Beeper_Windows_install.sh](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_Windows_install.sh))  
+- **macOS** ([Beeper_macOS_install.sh](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_macOS_install.sh))  
+- **Arch Linux** ([Beeper_ArchLinux_install.sh](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_Linux-Arch_install.sh))  
+- **Debian/Ubuntu/KDE/Linux Mint** ([Linux_Debian+Ubuntu_install.sh](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_Linux-Debian+Ubuntu_install.sh))  
+- **Fedora** ([Linux_Fedora_install.sh](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_Linux-Fedora_install.sh))  
+- **openSUSE** ([Beeper_SUSE_install.sh](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_Linux-SUSE_install.sh))  
+- **ChromeOS** ([Beeper_ChromeOS_install.sh](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_ChromeOS_install.sh))  
 
 ## Installation  
 
@@ -30,6 +30,14 @@ Then run `./Beeper_Windows_install.sh`
 Open Terminal using Spotlight (command+space) or Launchpad.
 Run `cd ~/Downloads` (or wherever the downloaded file is located)
 Then run `./Beeper_macOS_install.sh`
+
+#### ChromeOS
+At the bottom right of the screen, select the time.
+Select Settings and then About ChromeOS and then Developers.
+Next to "Linux development environment," select Set up.
+Follow the on-screen instructions. Setup can take 10 minutes or more.
+A terminal window will open. `cd ~/Downloads` (or wherever the downloaded file is located)
+Then run `./Beeper_ChromeOS_install.sh`
 
 #### Linux:
 Open your Terminal app
