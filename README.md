@@ -1,2 +1,4 @@
-# Beeper-install
-Easy-install scripts for Beeper on Linux, Chrome OS and Windows.
+# Beeper Install Scrips
+Command-line scripts for easily installing Beeper on Windows, macOS, Linux and ChromeOS.
+
+*more will be added to the readme, work in progress*
