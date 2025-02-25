@@ -9,7 +9,7 @@ This repository provides command-line scripts to simplify the installation of Be
 ## Supported Platforms  
 
 - **Windows** ([Beeper_Windows_install.ps1](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_Windows_install.ps1))  
-- **macOS** ([Beeper_macOS_install.sh](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_macOS_install.sh))  
+- **macOS** ([Beeper_macOS_install.command](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_macOS_install.command))  
 - **Arch Linux** ([Beeper_ArchLinux_install.sh](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_Linux-Arch_install.sh))  
 - **Debian/Ubuntu/KDE/Linux Mint** ([Linux_Debian+Ubuntu_install.sh](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_Linux-Debian+Ubuntu_install.sh))  
 - **Fedora** ([Linux_Fedora_install.sh](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_Linux-Fedora_install.sh))  
@@ -27,9 +27,10 @@ Run `cd ~/Downloads` (or wherever the downloaded file is located)
 Then run `./Beeper_Windows_install.sh`
 
 #### macOS
-Open Terminal using Spotlight (command+space) or Launchpad.
-Run `cd ~/Downloads` (or wherever the downloaded file is located)
-Then run `./Beeper_macOS_install.sh`
+Open a new Finder window and navigate to the location of the downloaded file (usually Downloads).
+Double-click the file to start opening it.
+Open System Settings (or System Preferences) and go to Privacy & Security.
+Click 'Open Anyway' (you may have to scroll down) and follow the prompts to allow the script to run.
 
 #### ChromeOS
 At the bottom right of the screen, select the time.
