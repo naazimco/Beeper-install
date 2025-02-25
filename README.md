@@ -43,8 +43,8 @@ Then run `./Beeper_ChromeOS_install.sh`
 Open your Terminal app
 Run `cd ~/Downloads` (or wherever the downloaded file is located)
 Then run
-`chmod +x Linux-Debian+Ubuntu_install.sh
-./Beeper_Linux-Debian+Ubuntu_install.sh`
+`chmod +x Linux-Debian+Ubuntu_install.sh`
+`./Beeper_Linux-Debian+Ubuntu_install.sh`
 
 ### Development
 
@@ -63,17 +63,20 @@ cd Beeper-install
 - On macOS, `./Beeper_macOS_install.sh`
 
 - On Debian/Ubuntu/KDE/XFCE/Linux Mint/your Debian distro,
-`chmod +x Beeper_Linux-Debian+Ubuntu_install.sh
-./Beeper_Linux-Debian+Ubuntu_install.sh`
+`chmod +x Beeper_Linux-Debian+Ubuntu_install.sh`
+`./Beeper_Linux-Debian+Ubuntu_install.sh`
 
-- On openSUSE, `chmod +x Beeper_Linux-SUSE_install.sh
-./Beeper_Linux-SUSE_install.sh`
+- On openSUSE,
+`chmod +x Beeper_Linux-SUSE_install.sh`
+`./Beeper_Linux-SUSE_install.sh`
 
-- On Fedora Linux, `chmod +x Beeper_Linux-Fedora_install.sh
-./Beeper_Linux-Fedora_install.sh`
+- On Fedora Linux,
+`chmod +x Beeper_Linux-Fedora_install.sh`
+`./Beeper_Linux-Fedora_install.sh`
 
-- On Arch Linux, `chmod +x Beeper_Linux-Arch_install.sh
-./Beeper_Linux-Arch_install.sh`
+- On Arch Linux,
+`chmod +x Beeper_Linux-Arch_install.sh`
+`./Beeper_Linux-Arch_install.sh`
 
 # Notes
 
