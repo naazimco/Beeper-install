@@ -8,18 +8,18 @@ This repository provides command-line scripts to simplify the installation of Be
 
 ## Supported Platforms  
 
-- **Windows** (`Beeper_Windows_install.sh`)  
-- **macOS** (`Beeper_macOS_install.sh`)  
-- **Arch Linux** (`Beeper_ArchLinux_install.sh`)  
-- **Debian/Ubuntu/KDE/Linux Mint** (`Linux_Debian+Ubuntu_install.sh`)  
-- **Fedora** (`Linux_Fedora_install.sh`)  
-- **openSUSE** (`Beeper_SUSE_install.sh`)  
-- **ChromeOS** (`ChromeOS_install.sh`)  
+- **Windows** (`[Beeper_Windows_install.sh](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_Windows_install.sh)`)  
+- **macOS** (`[Beeper_macOS_install.sh](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_macOS_install.sh)`)  
+- **Arch Linux** (`[Beeper_ArchLinux_install.sh](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_Linux-Arch_install.sh)`)  
+- **Debian/Ubuntu/KDE/Linux Mint** (`[Linux_Debian+Ubuntu_install.sh](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_Linux-Debian+Ubuntu_install.sh)`)  
+- **Fedora** (`[Linux_Fedora_install.sh](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_Linux-Fedora_install.sh)`)  
+- **openSUSE** (`[Beeper_SUSE_install.sh](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_Linux-SUSE_install.sh)`)  
+- **ChromeOS** (`[Beeper_ChromeOS_install.sh](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_ChromeOS_install.sh)`)  
 
 ## Installation  
 
 ### Per-platform
-Download the file for your platform from Releases or by selecting an option above.
+Download the file for your platform by selecting an option above.
 
 #### Windows
 Press Windows+X and select Terminal [on Windows 11] or Windows PowerShell [on Windows 10].  
