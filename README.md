@@ -19,7 +19,7 @@ This repository provides command-line scripts to simplify the installation of Be
 ## Installation  
 
 ### Per-platform
-Download the file for your platform by selecting an option above.
+Download the file for your platform by selecting an option above and saving (Ctrl+S on Windows/Linux/ChromeOS browsers, Cmd+S on macOS browsers).
 
 #### Windows
 Press Windows+X and select Terminal [on Windows 11] or Windows PowerShell [on Windows 10].  
