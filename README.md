@@ -8,7 +8,7 @@ This repository provides command-line scripts to simplify the installation of Be
 
 ## Supported Platforms  
 
-- **Windows** ([Beeper_Windows_install.sh](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_Windows_install.sh))  
+- **Windows** ([Beeper_Windows_install.ps1](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_Windows_install.ps1))  
 - **macOS** ([Beeper_macOS_install.sh](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_macOS_install.sh))  
 - **Arch Linux** ([Beeper_ArchLinux_install.sh](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_Linux-Arch_install.sh))  
 - **Debian/Ubuntu/KDE/Linux Mint** ([Linux_Debian+Ubuntu_install.sh](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_Linux-Debian+Ubuntu_install.sh))  
