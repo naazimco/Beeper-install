@@ -1,5 +1,5 @@
 #!/bin/bash
-
+echo "As a reminder, Beeper for ChromeOS is available in the Play Store, and may have better stability/compatibility."
 echo "Downloading Beeper prerequisites, please enter your password to continue..."
 sudo apt update && sudo apt upgrade -y
 sudo apt install -y nano libnss3 libnotify4 libsecret-1-0 fuse3
