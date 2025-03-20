@@ -9,7 +9,8 @@ This repository provides command-line scripts to simplify the installation of Be
 ## Supported Platforms  
 
 - **Windows** ([Beeper_Windows_install.ps1](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_Windows_install.ps1))  
-- **macOS** ([Beeper_macOS_install.command](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_macOS_install.command))  
+- **macOS (Apple Silicon)** ([Beeper_macOS_install.command](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_macOS-AppleSilicon_install.command))
+- **macOS (Intel)** ([Beeper_macOS_install.command](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_macOS-Intel_install.command))  
 - **Arch Linux** ([Beeper_ArchLinux_install.sh](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_Linux-Arch_install.sh))  
 - **Debian/Ubuntu/KDE/Linux Mint** ([Linux_Debian+Ubuntu_install.sh](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_Linux-Debian+Ubuntu_install.sh))  
 - **Fedora** ([Linux_Fedora_install.sh](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_Linux-Fedora_install.sh))  
@@ -19,14 +20,14 @@ This repository provides command-line scripts to simplify the installation of Be
 ## Installation  
 
 ### Per-platform
-Download the file for your platform by selecting an option above and saving (Ctrl+S on Windows/Linux/ChromeOS browsers, Cmd+S on macOS browsers).
+Download the file for your platform (excluding Windows) by selecting an option above and saving (Ctrl+S on Linux/ChromeOS browsers, Cmd+S on macOS browsers).
 
 #### Windows
+Ensure you are connected to the Internet.
 Press Windows+X and select Terminal [on Windows 11] or Windows PowerShell [on Windows 10].  
-Run `cd ~/Downloads` (or wherever the downloaded file is located)
-Then run `./Beeper_Windows_install.sh`
+Run `irm https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_Windows_install.ps1 | iex`
 
-#### macOS
+#### macOS (Apple Silicon & Intel)
 Open a new Finder window and navigate to the location of the downloaded file (usually Downloads).
 Double-click the file to start opening it.
 Open System Settings (or System Preferences) and go to Privacy & Security.
