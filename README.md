@@ -23,28 +23,28 @@ This repository provides command-line scripts to simplify the installation of Be
 Download the file for your platform (excluding Windows) by selecting an option above and saving (Ctrl+S on Linux/ChromeOS browsers, Cmd+S on macOS browsers).
 
 #### Windows
-Ensure you are connected to the Internet.
-Press Windows+X and select Terminal [on Windows 11] or Windows PowerShell [on Windows 10].  
-Run `irm https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_Windows_install.ps1 | iex`
+0. Ensure you are connected to the Internet.
+1. Press Windows+X and select Terminal [on Windows 11] or Windows PowerShell [on Windows 10].  
+2. Run `irm https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_Windows_install.ps1 | iex`
 
 #### macOS (Apple Silicon & Intel)
-Open a new Finder window and navigate to the location of the downloaded file (usually Downloads).
-Double-click the file to start opening it.
-Open System Settings (or System Preferences) and go to Privacy & Security.
-Click 'Open Anyway' (you may have to scroll down) and follow the prompts to allow the script to run.
+1. Open a new Finder window and navigate to the location of the downloaded file (usually Downloads).
+2. Double-click the file to start opening it.
+3. Open System Settings (or System Preferences) and go to Privacy & Security.
+4. Click 'Open Anyway' (you may have to scroll down) and follow the prompts to allow the script to run.
 
 #### ChromeOS
-At the bottom right of the screen, select the time.
-Select Settings and then About ChromeOS and then Developers.
-Next to "Linux development environment," select Set up.
-Follow the on-screen instructions. Setup can take 10 minutes or more.
-A terminal window will open. `cd ~/Downloads` (or wherever the downloaded file is located)
-Then run `./Beeper_ChromeOS_install.sh`
+1. At the bottom right of the screen, select the time.
+2. Select Settings and then About ChromeOS and then Developers.
+3. Next to "Linux development environment," select Set up.
+4. Follow the on-screen instructions. Setup can take 10 minutes or more.
+5. A terminal window will open. `cd ~/Downloads` (or wherever the downloaded file is located)
+6. Then run `./Beeper_ChromeOS_install.sh`
 
 #### Linux:
-Open your Terminal app
-Run `cd ~/Downloads` (or wherever the downloaded file is located)
-Then run
+1. Open your Terminal app
+2. Run `cd ~/Downloads` (or wherever the downloaded file is located)
+3. Then run
 ```
 chmod +x Linux-{your OS}_install.sh
 ./Beeper_Linux-{your OS}_install.sh
