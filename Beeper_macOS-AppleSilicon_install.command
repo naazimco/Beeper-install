@@ -1,9 +1,7 @@
 #!/bin/bash
 
 echo "Downloading Beeper for macOS..."
-# Beeper API URL
 BEEPER_URL="https://api.beeper.com/desktop/download/macos/arm64/stable/com.automattic.beeper.desktop"
-# Get the actual download link (follow redirects)
 FINAL_URL=$(curl -Ls -o /dev/null -w %{url_effective} "$BEEPER_URL")
 
 if [[ -z "$FINAL_URL" ]]; then
