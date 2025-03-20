@@ -1,5 +1,5 @@
 Write-Host "Downloading Beeper for Windows..."
-$installerUrl = "https://download.beeper.com/windows/BeeperSetup.exe"
+$installerUrl = "https://api.beeper.com/desktop/download/windows/x64/stable/com.automattic.beeper.desktop"
 $outputPath = "$env:USERPROFILE\Downloads\BeeperSetup.exe"
 Invoke-WebRequest -Uri $installerUrl -OutFile $outputPath -UseBasicParsing
 Write-Host "Installing Beeper..."
