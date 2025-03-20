@@ -8,7 +8,7 @@ wget -O beeper.desktop https://raw.githubusercontent.com/naazimco/Beeper-install
 wget -O icon.png https://raw.githubusercontent.com/naazimco/Beeper-install/main/icon.png
 chmod a+x Beeper.AppImage
 sudo mkdir -p /apps/AppImage/Beeper
-sudo mv beeper.desktop ~/local/share/applications/
+sudo mv beeper.desktop ~/.local/share/applications/
 sudo mv Beeper.AppImage icon.png /apps/AppImage/Beeper/
 cd /apps/AppImage/Beeper || exit
 echo "Beeper installation completed successfully."
