@@ -62,9 +62,9 @@ cd Beeper-install
 
 3. Run the appropriate script for your operating system.
 
-- On Windows, `./Beeper_Windows_install.sh`
+- On Windows, `./Beeper_Windows_install.ps1`
 
-- On macOS, `./Beeper_macOS_install.sh`
+- On macOS, `./Beeper_macOS_install.command`
 
 - On Debian/Ubuntu/KDE/XFCE/Linux Mint/your Debian distro,
 ```
