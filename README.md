@@ -50,6 +50,9 @@ chmod +x Linux-{your OS}_install.sh
 ./Beeper_Linux-{your OS}_install.sh
 ```
 
+##### Note for Linux:
+The update functionality might not work on linux, therefore you can use [Beeper_Linux_update.sh](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_Linux_update.sh) to perform those. This will keep one previous version of Beeper.AppImage in case the new version would introduce any issues. 
+
 ### Development
 
 1. Install Git
