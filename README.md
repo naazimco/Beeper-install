@@ -9,12 +9,12 @@ This repository provides command-line scripts to simplify the installation of Be
 ## Supported Platforms  
 
 - **Windows** ([Beeper_Windows_install.ps1](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_Windows_install.ps1))  
-- **macOS (Apple Silicon)** ([Beeper_macOS-AppleSilicon_install.command](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_macOS-AppleSilicon_install.command))
-- **macOS (Intel)** ([Beeper_macOS-Intel_install.command](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_macOS-Intel_install.command))  
+- **macOS (Apple Silicon)** ([Beeper_macOS_install.command](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_macOS_install.command))
+- **macOS (Intel)** ([Beeper_macOS_install.command](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_macOS_install.command))  
 - **Arch Linux** ([Beeper_ArchLinux_install.sh](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_Linux-Arch_install.sh))  
-- **Debian/Ubuntu/KDE/Linux Mint** ([Linux_Debian+Ubuntu_install.sh](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_Linux-Debian+Ubuntu_install.sh))  
-- **Fedora** ([Linux_Fedora_install.sh](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_Linux-Fedora_install.sh))  
-- **openSUSE** ([Beeper_SUSE_install.sh](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_Linux-SUSE_install.sh))  
+- **Debian/Ubuntu/KDE/Linux Mint** ([Beeper_Linux_install.sh](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_Linux_install.sh))  
+- **Fedora** ([Beeper_Linux_install.sh](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_Linux_install.sh))  
+- **openSUSE** ([Beeper_Linux_install.sh](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_Linux_install.sh))  
 - **ChromeOS** ([Beeper_ChromeOS_install.sh](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_ChromeOS_install.sh))  
 
 ## Installation  
@@ -46,8 +46,8 @@ Download the file for your platform (excluding Windows) by selecting an option a
 2. Run `cd ~/Downloads` (or wherever the downloaded file is located)
 3. Then run
 ```
-chmod +x Linux-{your OS}_install.sh
-./Beeper_Linux-{your OS}_install.sh
+chmod +x Linux_install.sh
+./Beeper_Linux_install.sh
 ```
 
 ### Development
@@ -66,28 +66,12 @@ cd Beeper-install
 
 - On macOS, `./Beeper_macOS_install.command`
 
-- On Debian/Ubuntu/KDE/XFCE/Linux Mint/your Debian distro,
+- On Linux,
 ```
-chmod +x Beeper_Linux-Debian+Ubuntu_install.sh
-./Beeper_Linux-Debian+Ubuntu_install.sh
-```
-
-- On openSUSE,
-```
-chmod +x Beeper_Linux-SUSE_install.sh
-./Beeper_Linux-SUSE_install.sh
+chmod +x Beeper_Linux_install.sh
+./Beeper_Linux_install.sh
 ```
 
-- On Fedora Linux,
-```
-chmod +x Beeper_Linux-Fedora_install.sh
-./Beeper_Linux-Fedora_install.sh
-```
-- On Arch Linux,
-```
-chmod +x Beeper_Linux-Arch_install.sh
-./Beeper_Linux-Arch_install.sh
-```
 # Notes
 
 Ensure you have the necessary dependencies installed before running the script.

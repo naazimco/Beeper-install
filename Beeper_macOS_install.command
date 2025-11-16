@@ -1,7 +1,16 @@
 #!/bin/bash
 
 echo "Downloading Beeper for macOS..."
-BEEPER_URL="https://api.beeper.com/desktop/download/macos/arm64/stable/com.automattic.beeper.desktop"
+ARCHITECTURE=$(uname -m)
+if [[ $ARCHITECTURE == "arm64" ]]; then
+    BEEPER_URL="https://api.beeper.com/desktop/download/macos/arm64/stable/com.automattic.beeper.desktop"
+elif [[ $ARCHITECTURE == "x86_64" ]]; then
+    BEEPER_URL="https://api.beeper.com/desktop/download/macos/x64/stable/com.automattic.beeper.desktop"
+else
+    echo "ERROR: Unsupported architecture, can't install Beeper" >> /dev/stderr
+    exit 1
+fi
+
 FINAL_URL=$(curl -Ls -o /dev/null -w %{url_effective} "$BEEPER_URL")
 
 if [[ -z "$FINAL_URL" ]]; then
