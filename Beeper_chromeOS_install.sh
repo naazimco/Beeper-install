@@ -1,9 +1,20 @@
 #!/bin/bash
 
-echo "As a reminder, Beeper for chromeOS is available in the Google Play Store and may have better stability/compatibility."
-echo "Downloading Beeper prerequisites, please enter your password to continue..."
-sudo apt update && sudo apt upgrade -y
-sudo apt install -y nano libnss3 libnotify-bin libsecret-1-0 fuse3 wget curl desktop-file-utils
+echo "Reminder: Beeper for chromeOS is available in the Play Store and may offer better stability."
+
+if [[ ! -d "/usr/bin" ]]; then
+    echo "This script must be run inside the ChromeOS Linux (Crostini) environment."
+    exit 1
+fi
+
+echo "Installing prerequisites..."
+sudo apt update
+sudo apt install -y nano libnss3 libnotify-bin libsecret-1-0 fuse3 wget curl desktop-file-utils xdg-utils
+
+if ! command -v fusermount3 >/dev/null 2>&1; then
+    echo "Warning: FUSE3 is not working. AppImage may run in extract mode only."
+fi
+
 BEEPER_URL="https://api.beeper.com/desktop/download/linux/x64/stable/com.automattic.beeper.desktop"
 FINAL_URL=$(curl -Ls -o /dev/null -w %{url_effective} "$BEEPER_URL")
 
@@ -13,15 +24,20 @@ if [[ -z "$FINAL_URL" ]]; then
 fi
 
 echo "Downloading Beeper from $FINAL_URL..."
-wget -O Beeper.AppImage "$FINAL_URL"
-chmod a+x Beeper.AppImage
-mkdir -p ~/Applications/Beeper
-mv Beeper.AppImage ~/Applications/Beeper/
+INSTALL_DIR="$HOME/Applications/Beeper"
+mkdir -p "$INSTALL_DIR"
+wget -O "$INSTALL_DIR/Beeper.AppImage" "$FINAL_URL"
+chmod +x "$INSTALL_DIR/Beeper.AppImage"
+
 mkdir -p ~/.local/share/applications
 wget -O ~/.local/share/applications/beeper.desktop https://raw.githubusercontent.com/naazimco/Beeper-install/main/beeper.desktop
-wget -O ~/Applications/Beeper/icon.png https://raw.githubusercontent.com/naazimco/Beeper-install/main/icon.png
-chmod +x ~/.local/share/applications/beeper.desktop
-desktop-file-install ~/.local/share/applications/beeper.desktop
+wget -O "$INSTALL_DIR/icon.png" https://raw.githubusercontent.com/naazimco/Beeper-install/main/icon.png
 
-echo "Beeper installation completed successfully."
-echo "You may need to restart your chromeOS session for the app icon to appear."
+sed -i "s|Exec=.*|Exec=$INSTALL_DIR/Beeper.AppImage|" ~/.local/share/applications/beeper.desktop
+sed -i "s|Icon=.*|Icon=$INSTALL_DIR/icon.png|" ~/.local/share/applications/beeper.desktop
+
+desktop-file-install ~/.local/share/applications/beeper.desktop
+update-desktop-database ~/.local/share/applications
+
+echo "Beeper installation completed."
+echo "If the icon does not appear, restart your ChromeOS session."
