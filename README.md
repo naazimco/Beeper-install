@@ -1,79 +1,76 @@
-# Beeper Install Scripts  
+# Beeper Install Scripts
 
-Easy-install scripts for Beeper on Windows, macOS, Linux, and ChromeOS.  
+![License](https://img.shields.io/badge/License-MIT-green)
+![Status](https://img.shields.io/badge/Maintained-Yes-success)
 
-## Overview  
+Cross-platform install scripts for Beeper on Windows, macOS, Linux, and ChromeOS.  
+These scripts automate setup so users can install Beeper quickly and consistently.
 
-This repository provides command-line scripts to simplify the installation of Beeper on multiple operating systems. The scripts automate the setup process, making it easier for users to get started with Beeper.  
 
-## Supported Platforms  
 
-- **Windows** ([Beeper_Windows_install.ps1](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_Windows_install.ps1))  
-- **macOS** ([Beeper_macOS_install.command](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_macOS_install.command))
-- **Linux (Arch, Debian, Ubuntu, Fedora, openSUSE)** ([Beeper_Linux_install.sh](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_Linux_install.sh))  
-- **ChromeOS** ([Beeper_ChromeOS_install.sh](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_ChromeOS_install.sh))  
+## Supported Platforms
 
-## Installation  
+| OS | Script | File |
+|----|--------|------|
+| <img src="https://img.icons8.com/fluency/48/windows-11.png" width="29"> | PowerShell installer | [`Beeper_Windows_install.ps1`](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_Windows_install.ps1) |
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg" width="29"> | .command installer | [`Beeper_macOS_install.command`](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_macOS_install.command) |
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" width="29"> | Bash installer (Arch, Debian/Ubuntu, Fedora, openSUSE) | [`Beeper_Linux_install.sh`](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_Linux_install.sh) |
+| <img src="https://img.icons8.com/fluency/48/chrome.png" width="29"> | Bash installer | [`Beeper_chromeOS_install.sh`](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_chromeOS_install.sh) |
 
-### Per-platform
-Download the file for your platform (excluding Windows) by selecting an option above and saving (Ctrl+S on Linux/ChromeOS browsers, Cmd+S on macOS browsers).
+# Installing
+### Windows
+1. Press Windows+X
+2. Select Terminal [on Windows 11] or Windows PowerShell [on Windows 10 and below].  
+3. Run `irm https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_Windows_install.ps1 | iex`
 
-#### Windows
-0. Ensure you are connected to the Internet.
-1. Press Windows+X and select Terminal [on Windows 11] or Windows PowerShell [on Windows 10].  
-2. Run `irm https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_Windows_install.ps1 | iex`
+---
 
-#### macOS (Apple Silicon & Intel)
-1. Open a new Finder window and navigate to the location of the downloaded file (usually Downloads).
-2. Double-click the file to start opening it.
-3. Open System Settings (or System Preferences) and go to Privacy & Security.
-4. Click 'Open Anyway' (you may have to scroll down) and follow the prompts to allow the script to run.
+### macOS
+1. Save [Beeper_macOS_install.command](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_macOS_install.command) by opening the link and pressing Command+S.
+2. Open the Downloads folder and double-click the file.
+3. If macOS blocks it from opening, go to System Settings (or System Preferences), then Privacy & Security → Open Anyway.
 
-#### ChromeOS
-1. At the bottom right of the screen, select the time.
-2. Select Settings and then About ChromeOS, and then Developers.
-3. Next to "Linux development environment," select Set up.
-4. Follow the on-screen instructions. Setup can take 10 minutes or more.
-5. A terminal window will open. `cd ~/Downloads` (or wherever the downloaded file is located)
-6. Then run `./Beeper_ChromeOS_install.sh`
+---
 
-#### Linux:
-1. Open your Terminal app
-2. Run `cd ~/Downloads` (or wherever the downloaded file is located)
-3. Then run
+### Linux
+1. Download [Beeper_Linux_install.sh](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_Linux_install.sh) by opening the link and pressing Ctrl+S.
+2. Open your terminal application, then run these commands:
 ```
-chmod +x Linux_install.sh
-./Beeper_Linux_install.sh
-```
-
-### Development
-
-1. Install Git
-
-2. Clone the repository:  
-```
-git clone https://github.com/naazimco/Beeper-install.git
-cd Beeper-install
-```
-
-3. Run the appropriate script for your operating system.
-
-- On Windows, `./Beeper_Windows_install.ps1`
-
-- On macOS, `./Beeper_macOS_install.command`
-
-- On Linux,
-```
+cd ~/Downloads
 chmod +x Beeper_Linux_install.sh
 ./Beeper_Linux_install.sh
 ```
 
-# Notes
+---
 
-Ensure you have the necessary dependencies installed before running the script.
-Some scripts may require root privileges (sudo).
-The repository is actively being improved, and additional features may be added.
+### chromeOS
+1. Save [Beeper_chromeOS_install.sh](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_chromeOS_install.sh) by opening the link and pressing Ctrl+S.
+2. In the bottom-right corner of the screen, select the time.
+3. Select Settings → About ChromeOS → Developers.
+4. Next to "Linux development environment," select Set up.
+5. Follow the on-screen instructions. Setup can take 10 minutes or more.
+6. A terminal window should open. If it does not, open the Terminal app from the app launcher.
+7. Run these commands:
+   ```
+   cd ~/Downloads
+   ./Beeper_ChromeOS_install.sh
+   ```
+
+---
+
+# Development
+Open up your terminal app and run these commands:
+```
+git clone https://github.com/naazimco/Beeper-install.git
+cd Beeper-install
+```
+Run the installer script for your platform.
+
+# Notes
+- Ensure you have the necessary dependencies installed before running the script.
+- Some scripts may require root privileges (sudo).
+- The repository is actively being improved, and additional features may be added.
+
 
 # Contributing
-
-If you'd like to contribute, feel free to submit a pull request or open an issue.
+Pull requests and issues are welcome. If you'd like to contribute, feel free to submit a pull request or open an issue.
