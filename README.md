@@ -29,8 +29,12 @@ These scripts automate setup so users can install Beeper quickly and consistentl
 1. Open the [macOS install script link](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_macOS_install.command).
 2. Press Command+S to save it.
    - If Safari adds “.txt”, rename the file to: Beeper_macOS_install.command
-3. Open your Downloads folder and double-click the file.
-4. If macOS blocks it, go to System Settings (or System Preferences) → Privacy & Security → Open Anyway
+3. Open Terminal, then run these commands:
+```
+cd ~/Downloads
+chmod +x Beeper_macOS_install.command
+./Beeper_macOS_install.command
+```
 
 ---
 
