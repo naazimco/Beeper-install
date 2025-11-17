@@ -59,10 +59,9 @@ fi
 echo "${GREEN}Resolved download URL:${RESET} $FINAL_URL"
 
 WORKDIR=$(mktemp -d /tmp/beeper_install_XXXXXX)
-APPDIR="$HOME/.local/share/beeper"
-DESKTOP_DIR="$HOME/.local/share/applications"
-ICON_DIR="$HOME/.local/share/icons/hicolor/128x128/apps"
-mkdir -p "$APPDIR" "$DESKTOP_DIR" "$ICON_DIR"
+APPDIR="$HOME/Applications/Beeper"
+ICONDIR="$HOME/.local/share/icons/hicolor/128x128/apps"
+mkdir -p "$APPDIR" "$ICONDIR"
 
 echo "${CYAN}Downloading Beeper AppImage...${RESET}"
 wget --progress=bar:force -O "$WORKDIR/Beeper.AppImage" "$FINAL_URL"
@@ -72,22 +71,47 @@ if [[ ! -s "$WORKDIR/Beeper.AppImage" ]]; then
     exit 1
 fi
 
-echo "${CYAN}Downloading Beeper desktop entry & icon...${RESET}"
-wget -q -O "$WORKDIR/beeper.desktop" https://raw.githubusercontent.com/naazimco/Beeper-install/main/beeper.desktop
-wget -q -O "$WORKDIR/icon.png" https://raw.githubusercontent.com/naazimco/Beeper-install/main/icon.png
+echo "${CYAN}Downloading Beeper icon...${RESET}"
+wget -q -O "$WORKDIR/beeper.png" \
+  https://raw.githubusercontent.com/naazimco/Beeper-install/main/beeper.png
 
 chmod +x "$WORKDIR/Beeper.AppImage"
 
 echo "${CYAN}Installing Beeper...${RESET}"
+
 mv "$WORKDIR/Beeper.AppImage" "$APPDIR/Beeper.AppImage"
-mv "$WORKDIR/beeper.desktop" "$DESKTOP_DIR/beeper.desktop"
-mv "$WORKDIR/icon.png" "$ICON_DIR/beeper.png"
+mv "$WORKDIR/beeper.png" "$ICONDIR/beeper.png"
+update-icon-cache ~/.local/share/icons/hicolor
 
-sed -i "s|Exec=.*|Exec=$APPDIR/Beeper.AppImage|g" "$DESKTOP_DIR/beeper.desktop"
-sed -i "s|Icon=.*|Icon=$ICON_DIR/beeper.png|g" "$DESKTOP_DIR/beeper.desktop"
+echo "Generating Beeper desktop entry..."
 
-chmod +x "$DESKTOP_DIR/beeper.desktop"
-update-desktop-database "$DESKTOP_DIR" 2>/dev/null || true
+DESKTOP_FILE="$HOME/.local/share/applications/beeper.desktop"
+mkdir -p "$(dirname "$DESKTOP_FILE")"
+
+cat <<EOF > "$DESKTOP_FILE"
+[Desktop Entry]
+Type=Application
+Name=Beeper
+GenericName=Chat Client
+Comment=Unified messaging app for all your chats
+Icon=beeper
+Exec=$APPDIR/Beeper.AppImage %U
+TryExec=$APPDIR/Beeper.AppImage
+Terminal=false
+Categories=Network;InstantMessaging;Chat;
+StartupNotify=true
+StartupWMClass=Beeper
+MimeType=x-scheme-handler/beeper;
+Keywords=Chat;Messaging;IM;Beeper;
+X-GNOME-UsesNotifications=true
+EOF
+
+desktop-file-install "$DESKTOP_FILE" 2>/dev/null || true
+update-desktop-database ~/.local/share/applications 2>/dev/null || true
+
+chmod +x "$DESKTOP_FILE"
+echo "Desktop entry installed: $DESKTOP_FILE"
+
 
 echo "${GREEN}Beeper installation completed successfully!${RESET}"
 echo "You can now launch Beeper from your application menu."
