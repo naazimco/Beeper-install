@@ -46,6 +46,16 @@ cd ~/Downloads
 chmod +x Beeper_Linux_install.sh
 ./Beeper_Linux_install.sh
 ```
+#### Note:
+The update functionality may not work on Linux. If it does not, you can use [Beeper_Linux_update.sh](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_Linux_update.sh) to perform updates. 
+This will also keep the previous version of Beeper.AppImage in case the new version introduces any issues.
+
+To use this script, save it (with Ctrl+S), then run these commands in your terminal application:
+```
+cd ~/Downloads
+chmod +x Beeper_Linux_update.sh
+./Beeper_Linux_update.sh
+```
 
 ---
 
