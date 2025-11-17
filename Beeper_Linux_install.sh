@@ -1,8 +1,23 @@
 #!/bin/bash
 
 echo "Downloading Beeper prerequisites, please enter your password to continue..."
-sudo apt update && sudo apt upgrade -y
-sudo apt install -y nano libnss3 libnotify-bin libsecret-1-0 fuse3 wget curl
+if command -v apt > /dev/null 2>&1; then
+    sudo apt update && sudo apt upgrade -y
+    sudo apt install -y nano libnss3 libnotify-bin libsecret-1-0 fuse3 wget curl
+elif command -v dnf > /dev/null 2>&1; then
+    sudo dnf check-update
+    sudo dnf install -y nano nss libnotify libsecret fuse3 wget curl
+elif command -v zypper > /dev/null 2>&1; then
+    sudo zypper refresh
+    sudo zypper update -y
+    sudo zypper install -y nano nss libnotify libsecret fuse3
+elif command -v pacman > /dev/null 2>&1; then
+    sudo pacman -Syu --noconfirm
+    sudo pacman -S --noconfirm nano nss libnotify libsecret fuse
+else
+    echo "WARNING: Unsupported Linux distribution, can't install needed dependencies" >> /dev/stderr
+fi
+
 BEEPER_URL="https://api.beeper.com/desktop/download/linux/x64/stable/com.automattic.beeper.desktop"
 FINAL_URL=$(curl -Ls -o /dev/null -w %{url_effective} "$BEEPER_URL")
 
