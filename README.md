@@ -9,12 +9,8 @@ This repository provides command-line scripts to simplify the installation of Be
 ## Supported Platforms  
 
 - **Windows** ([Beeper_Windows_install.ps1](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_Windows_install.ps1))  
-- **macOS (Apple Silicon)** ([Beeper_macOS_install.command](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_macOS_install.command))
-- **macOS (Intel)** ([Beeper_macOS_install.command](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_macOS_install.command))  
-- **Arch Linux** ([Beeper_ArchLinux_install.sh](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_Linux-Arch_install.sh))  
-- **Debian/Ubuntu/KDE/Linux Mint** ([Beeper_Linux_install.sh](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_Linux_install.sh))  
-- **Fedora** ([Beeper_Linux_install.sh](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_Linux_install.sh))  
-- **openSUSE** ([Beeper_Linux_install.sh](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_Linux_install.sh))  
+- **macOS** ([Beeper_macOS_install.command](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_macOS_install.command))
+- **Linux (Arch, Debian, Ubuntu, Fedora, openSUSE)** ([Beeper_Linux_install.sh](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_Linux_install.sh))  
 - **ChromeOS** ([Beeper_ChromeOS_install.sh](https://github.com/naazimco/Beeper-install/raw/refs/heads/main/Beeper_ChromeOS_install.sh))  
 
 ## Installation  
@@ -35,7 +31,7 @@ Download the file for your platform (excluding Windows) by selecting an option a
 
 #### ChromeOS
 1. At the bottom right of the screen, select the time.
-2. Select Settings and then About ChromeOS and then Developers.
+2. Select Settings and then About ChromeOS, and then Developers.
 3. Next to "Linux development environment," select Set up.
 4. Follow the on-screen instructions. Setup can take 10 minutes or more.
 5. A terminal window will open. `cd ~/Downloads` (or wherever the downloaded file is located)
